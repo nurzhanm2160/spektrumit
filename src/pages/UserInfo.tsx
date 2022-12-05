@@ -8,6 +8,7 @@ import favorite from '../assets/favorite.png'
 import valid from '../assets/valid.png'
 import {StateType} from "../redux/store";
 import {UserImage} from "../components/UserImage/UserImage";
+import {NavLink} from "react-router-dom";
 
 export const UserInfo: FC = () => {
     const dispatch: $fixme = useDispatch()
@@ -25,7 +26,12 @@ export const UserInfo: FC = () => {
         <>
             <div className="header">
                 <p>Nurzhan Murzakhmet</p>
-                <button className="green_button"><span>formularz</span> <span>rejestracyjny</span></button>
+                <button className="green_button">
+                    <NavLink to="/form">
+                        <span>formularz<br/></span>
+                        <span>rejestracyjny</span>
+                    </NavLink>
+                </button>
             </div>
             <div className="user__info-container">
                 <div className="rectangle">
